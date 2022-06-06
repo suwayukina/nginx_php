@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - 5321:80
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d
+      - ./src:/var/www/html
